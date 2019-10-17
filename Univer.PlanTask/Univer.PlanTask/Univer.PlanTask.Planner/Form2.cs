@@ -7,12 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Univer.PlanTask.Core;
+using Univer.PlanTask.Core.Store.Impl;
 
 namespace Univer.PlanTask.Planner
 {
     public partial class Form2 : Form
     {
+        public string FormName
+        {
+            get
+            {
+                return textBox1.Text;
+            }
+            set
+            {
+                textBox1.Text = value;
+            }
+        }
         private FormMain Form1;
+        /// <summary>
+        /// Дата начало
+        /// </summary>
+        public DateTime StartDate
+        {
+            get
+            {
+                return dateTime1.Value;
+            }
+            set
+            {
+                dateTime1.Value = value;
+            }
+        }
+
+        /// <summary>
+        /// Срок выполнения
+        /// </summary>
+        public DateTime Deadline
+        {
+            get
+            {
+                return dateTime2.Value;
+            }
+            set
+            {
+                dateTime2.Value = value;
+            }
+        }
 
         public Form2()
         {
@@ -30,10 +71,9 @@ namespace Univer.PlanTask.Planner
         {
 
         }
-
         public void button1_Click(object sender, EventArgs e)
         {
-            var task = new Task(textBox1.Text, dateTime1.Value.Hour, dateTime1.Value.Minute,  dateTime1.Value.Day, dateTime1.Value ,dateTime2.Value);
+            var task = new Task(textBox1.Text, dateTime1.Value ,dateTime2.Value, 0);
 
             Form1.AddTask(task);
             this.Close();

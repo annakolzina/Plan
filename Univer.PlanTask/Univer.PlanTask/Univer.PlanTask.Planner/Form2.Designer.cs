@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(144, 154);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(621, 22);
             this.textBox1.TabIndex = 1;
@@ -69,10 +70,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(144, 410);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.button1.Location = new System.Drawing.Point(181, 378);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(371, 92);
+            this.button1.Size = new System.Drawing.Size(228, 163);
             this.button1.TabIndex = 6;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
@@ -82,7 +86,7 @@
             // 
             this.dateTime2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTime2.Location = new System.Drawing.Point(536, 311);
-            this.dateTime2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTime2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTime2.Name = "dateTime2";
             this.dateTime2.Size = new System.Drawing.Size(265, 22);
             this.dateTime2.TabIndex = 7;
@@ -103,7 +107,7 @@
             // 
             this.dateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTime1.Location = new System.Drawing.Point(144, 311);
-            this.dateTime1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTime1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTime1.Name = "dateTime1";
             this.dateTime1.Size = new System.Drawing.Size(265, 22);
             this.dateTime1.TabIndex = 9;
@@ -112,6 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dateTime1);
             this.Controls.Add(this.label4);
@@ -120,7 +125,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
